@@ -19,27 +19,27 @@
            
            document.getElementById("solution").innerHTML="you are under weight" ;
            u.innerHTML="<a>Get detail about under weight</a>"
-           m.innerHTML="<p>hello world</p>"
+           m.innerHTML="<p>data about under weight</p>"
           
 
         }
         else if(newbmivalue>18.5 && newbmivalue<24.9){
             document.getElementById("solution").innerHTML="you are in healthy range";
             u.innerHTML="<a>Get detail for healthy body</a>"
-            m.innerHTML="<p>hello world!!!</p>"
+            m.innerHTML="<p>great you are healty .maintain it</p>"
           
 
         }
         else if(newbmivalue>25 && newbmivalue<29.9){
             document.getElementById("solution").innerHTML="you are in over weight";
             u.innerHTML="<a>Get detail about over weight</a>"
-            m.innerHTML="<p>hello world prakhar </p>"
+            m.innerHTML="<p>data about over weight how to overcome it </p>"
           
         }
         else if(newbmivalue>30 && newbmivalue<39.9){
             document.getElementById("solution").innerHTML="you are in described obesity";
             u.innerHTML="<a>Now more</a>"
-            m.innerHTML="<p>hello world srivastav</p>"
+            m.innerHTML="<p>hello world</p>"
           
         }
         else if(newbmivalue>40){
