@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"
+  ></script>
+
+</head>
+
+<body>
+    <script src="style.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <section class="page4">
+
+        <div class="containerr">
+            <div class="cardd">
+                <div class="cardd-header"><b>BMI CALCULATOR</b></div>
+                <div class="cardd-body">
+                    <form class="auto" id="myformm" onsubmit="return false">
+                        <div class="formm-group">
+                            <label>WEIGHT:</label>
+                            <input type="number" name="fname" id="weight" size="2rem" placeholder="Weight in kg"
+                                class="formm-control">
+
+                        </div>
+                        <div class="formm-group">
+                            <label>HEIGHT:&nbsp;</label>
+                            <input type="text" name="lname" id="height" size="20rem" placeholder="Height in ft" required
+                                class="formm-control">
+
+                        </div>
+                        <div class="formm-group">
+                            <label>WAIST:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" name="" id="waist" size="20rem" placeholder="waist in cm"
+                                class="formm-control">
+
+                        </div>
+                        <div class="formm-group">
+                            <label>AGE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" name="" id="age" size="20rem" placeholder="Age" class="formm-control">
+
+                        </div>
+                        <div class="formm-group">
+                            <label>BMI VALUE:</label>
+                            <input type="number" name="" id="bmivalue" font-size="10rem" required class="formm-control">
+
+                        </div>
+                        <div class="formm-group">
+                            <label>BFP VALUE:</label>
+                            <input type="number" name="" id="bfpvalue" font-size="10rem" size="10" required class="formm-control">
+
+                        </div>
+                        <div>
+                            <button type="submit" class="btnn" id="toggle1" onclick="getbmivalue(); second2();">check
+                                bmi</button>
+                            <button type="submit" class="btnn" id="toggle" onclick="getbfpvalue(); second();">Check body
+                                fat</button>
+                            <button type="submit" id="reset" onclick="fun()" class="btnn">Reset</button>
+                        </div>
+                    </form>
+                    <div>
+                        <img src="bmiimage.jpeg" width=300rem height=400rem style="margin-top: 100px; ">
+                    </div>
+
+                </div> <br> <br> <br>
+                <span class="range-of-bmi"> A healthy<b> BMI</b> range between 19 to 25</span>
+            </div>
+        </div>
+    </section>
+
+    <p id="solution" style="display: none;"></p>
+    <div>
+        <a id="button1" href="#popup"></a>
+        <div class="popup" id="popup">
+            <div class="popup-inner">
+              
+              <div class="popuptext">
+                <h1>GET MORE DETAILS</h1>
+                <p id="popupcontent"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, possimus.</p>
+              </div>
+              <a class="closepopup" href="#">X</a>
+            </div>
+          </div>
+       
+
+
+
+    </div>
+
+    <div id="table1" style="overflow-x: auto; display:none;">
+        <p>According council on exercise body fat category</p>
+        <table>
+            <tr class="main">
+                <th>DESCRIPTION</th>
+                <th>WOMEN</th>
+                <th>MEN</th>
+
+            </tr>
+            <tr>
+                <td>Essential fat</td>
+                <td>10-13%</td>
+                <td>2-5%</td>
+
+            </tr>
+            <tr>
+                <td>Athletes</td>
+                <td>14-20%</td>
+                <td>25-31%</td>
+
+            </tr>
+            <tr>
+                <td>Average</td>
+                <td>6-13%</td>
+                <td>18-24%</td>
+
+            </tr>
+        </table>
+
+    </div>
+
+
+    <script>
+        const targetDiv = document.getElementById("table1");
+        const btn = document.getElementById("toggle");
+        function second() {
+            if (targetDiv.style.display !== "none") {
+                targetDiv.style.display = "none";
+            } else {
+                targetDiv.style.display = "block";
+            }
+        }
+
+
+    </script>
+    <script>
+        const targetDivv = document.getElementById("solution");
+        const btnnn = document.getElementById("toggle1");
+        height = height * 12;
+        height = height * 0.025;// now height in meter
+        var newbmivalue = weight / (height * height);
+        newbmivalue = Math.round(newbmivalue);
+
+
+        document.getElementById('bmivalue').value = newbmivalue;
+
+        function second2() {
+            if (targetDivv.style.display !== "none") {
+                targetDivv.style.display = "none";
+            } else {
+                targetDivv.style.display = "block";
+            }
+        }
+
+    </script>
+   
+
+
+
+</body>
+
+</html>
